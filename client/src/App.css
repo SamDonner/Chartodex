@@ -6,6 +6,10 @@ h3 {
   color: gray;
 }
 
+.center {
+  align-items: center;
+}
+
 .feather {
   width: 16px;
   height: 16px;
@@ -24,11 +28,10 @@ h3 {
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.3;
+  opacity: .3;
 }
 
 .bg-overlay {
-  
   opacity: 0.3;
   position: absolute;
   height: 500px;
@@ -38,18 +41,55 @@ h3 {
 
 .showcase {
   height: 500px;
-  color: black;
+  color: #41B8B2;
   text-align: center;
+  font-size: 3vw;
 }
 
 .showcase_wrap {
-  padding-top: 25%;
+  padding-top: 20%;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .showcase_wrap_text {
+  color: black;
   font-weight: 400;
+  font-size: 4vw;
   margin: 0 auto;
+  margin-top: 5%;
   width: 80%;
+  text-shadow: 1px 1px 1px rgb(124, 129, 129);
+}
+
+.jumbo-title {
+  font-size: 5vw;
+  color: black;
+  text-shadow: 1px 1px 1px #41B8B2;
+  margin-left: 8px;
+}
+
+.login-button {
+  background-color: black;
+  border-radius: 25px;
+  margin-top: 20%;
+  padding: 10px;
+  font-size: large;
+  color: white;
+  width: 40%;
+  border: 2px solid #41B8B2;
+
+}
+
+.login-input {
+  border-radius: 25px;
+  margin: 0 auto;
+  width: 40%;
+  margin-top: 10px;
+  outline: none;
+}
+
+.login-input:focus {
+  box-shadow: 0 0 5px #41B8B2;
 }
 
 
@@ -110,26 +150,32 @@ h3 {
 }
 
 .nav-brand {
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 200%;
   font-weight: bold;
-  background-color: black;
-  color: #41B8B2
+  color: #41B8B2 !important;
 }
 
 .navi {
   background-color: black;
-}
-
-.jumbo-button {
-  background-color: #41B8B2;
-  border-radius: 15px;
-  margin-top: 20px;
-  font-size: x-large;
-
-}
-
-.nav-links {
   color: #41B8B2;
+}
+
+
+.nav-link {
+  color: rgb(196, 202, 202);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2vw;
+}
+
+.nav-link:hover {
+  color: #41B8B2;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2vw;
+}
+
+.nav-hamburger {
+  font-size: 25px;
 }
 
 
@@ -138,6 +184,7 @@ h3 {
 
 .ticker {
   background: black;
+  color: white;
 }
 
 .ticker-text {

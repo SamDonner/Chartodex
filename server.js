@@ -4,6 +4,9 @@ const bodyParser = require('body-parser');
 const path = require('path');
 
 const charts = require('./routes/api/charts');
+const users = require('./routes/api/users');
+const logs = require('./routes/api/logs');
+const portfolio = require('./routes/api/portfolio');
 
 const app = express();
 
@@ -19,6 +22,9 @@ mongoose
   .catch(err => console.log(err));
 
 app.use('/api/charts', charts);
+app.use('/api/users', users);
+app.use('/api/logs', logs);
+app.use('/api/portfolio', portfolio);
 
 if(process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
