@@ -1,20 +1,32 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-import store from './store';
-import Layout from './components/Layout';
-import Landing from './components/Landing';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import store from './store';
+import ChartLayout from './components/ChartLayout';
+import Landing from './components/Landing';
+import MainNavbar from './components/MainNavbar';
+import Register from './components/auth/Register';
+import Login from './components/auth/Login';
+import Charts from './components/Charts';
+import LoginModal from './components/auth/LoginModal';
+
 import './App.css';
+
 
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <div className="App" >
-          <Landing />
-         
-        </div>
+        <Router>
+          <div className="App" >
+            <MainNavbar />
+            <Route exact path="/" component={ Landing } />
+            <LoginModal/>
+            <Route exact path="/charts" component={ ChartLayout } />
+            
+          </div>
+        </Router>
       </Provider>  
     );
   }

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import TradingViewWidget from 'react-tradingview-widget'; 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { Container } from 'reactstrap';
 import { fetchCharts } from '../actions/chartActions';
 import NoCharts from './NoCharts';
 
@@ -32,12 +31,12 @@ class Charts extends Component {
     if (this.props.chart.charts.length > 0) {
 
     return (
-      <Container className="charts-container">
+      <div className="container charts-container">
         <h1>Charts</h1>
         <div>
           {this.props.chart.charts.map(this.renderCharts.bind(this))}
         </div>
-      </Container>
+      </div>
     )
   } else {
     return (

@@ -7,9 +7,11 @@ const charts = require('./routes/api/charts');
 const users = require('./routes/api/users');
 const logs = require('./routes/api/logs');
 const portfolio = require('./routes/api/portfolio');
+const passport = require('passport');
 
 const app = express();
 
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 //DB Config
@@ -20,6 +22,12 @@ mongoose
   .connect(db, { useNewUrlParser: true })
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log(err));
+
+//passport middleware
+app.use(passport.initialize());
+
+//Passport Config
+require('./config/passport')(passport);
 
 app.use('/api/charts', charts);
 app.use('/api/users', users);

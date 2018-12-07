@@ -7,7 +7,7 @@ h3 {
 }
 
 .center {
-  align-items: center;
+  text-align: center;
 }
 
 .feather {
@@ -31,66 +31,52 @@ h3 {
   opacity: .3;
 }
 
-.bg-overlay {
-  opacity: 0.3;
-  position: absolute;
-  height: 500px;
-  width: 100%;
-  z-index: -1;
-}
 
 .showcase {
   height: 500px;
-  color: #41B8B2;
-  text-align: center;
-  font-size: 3vw;
+  color: gray;
+  text-align: left;
+  font-size: 2vw;
 }
 
 .showcase_wrap {
-  padding-top: 20%;
-  font-family: 'Josefin Sans', sans-serif;
+  padding-top: 15%;
 }
 
 .showcase_wrap_text {
+  font-family: 'Josefin Sans', sans-serif;
   color: black;
   font-weight: 400;
   font-size: 4vw;
-  margin: 0 auto;
-  margin-top: 5%;
   width: 80%;
   text-shadow: 1px 1px 1px rgb(124, 129, 129);
 }
 
-.jumbo-title {
-  font-size: 5vw;
-  color: black;
-  text-shadow: 1px 1px 1px #41B8B2;
-  margin-left: 8px;
+.landing-subtitle {
+  width: 60%;
 }
 
+
 .login-button {
-  background-color: black;
-  border-radius: 25px;
-  margin-top: 20%;
+  background-color: #41B8B2;
+  border-radius: 8px;
+  margin-top: 3%;
   padding: 10px;
   font-size: large;
   color: white;
   width: 40%;
-  border: 2px solid #41B8B2;
-
 }
 
-.login-input {
-  border-radius: 25px;
-  margin: 0 auto;
+.login-button:hover {
+  background-color: black;
+  border-radius: 8px;
+  margin-top: 3%;
+  padding: 10px;
+  font-size: large;
+  color: white;
   width: 40%;
-  margin-top: 10px;
-  outline: none;
 }
 
-.login-input:focus {
-  box-shadow: 0 0 5px #41B8B2;
-}
 
 
 /*
@@ -132,7 +118,7 @@ h3 {
  */
 
 [role="main"] {
-  padding-top: 1%; /* Space for fixed navbar */
+   /* Space for fixed navbar */
 }
 
 .charts-container {
@@ -176,6 +162,18 @@ h3 {
 
 .nav-hamburger {
   font-size: 25px;
+  color: #41B8B2;
+}
+
+.nav-hamburger-menu {
+  width: 20%;
+  margin-left: -15px;
+}
+
+.add-chart-btn {
+  color: #41B8B2 !important;
+  border: solid 1px #41B8B2;
+  background: transparent;
 }
 
 

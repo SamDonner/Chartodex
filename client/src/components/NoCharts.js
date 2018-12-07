@@ -7,13 +7,13 @@ const NoCharts = (props) => {
       <div className="showcase_image" > 
         <img src={HomeImage} alt="cover" className="showcase_image"/>
       </div>
-      <div className="bg-overlay" />
-        <div className="showcase_wrap">
-          <div className="container showcase">
-            <h1>NO CHARTS YET</h1>
-            <h5 className="showcase_wrap_text">Add charts in the side menu</h5>
-          </div>
-        </div>
+      <div className="showcase_wrap center">
+        <div className="container showcase"> 
+          <h5 className="showcase_wrap_text"><strong>No charts yet</strong></h5>
+          <div className="landing-subtitle">Add charts to your watchlist by using the menu on the left or from the main menu at the top of the page </div>
+          <div className="landing-subtitle">HAPPY TRADING!!!</div>
+        </div>  
+      </div>
     </div>
   );
 };

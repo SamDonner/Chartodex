@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { deleteChart } from '../actions/chartActions';
 import { bindActionCreators } from 'redux';
-import { Button, Container, ListGroup, ListGroupItem } from 'reactstrap';
+
 
 class Watchlist extends Component {
 
@@ -12,27 +12,27 @@ class Watchlist extends Component {
   
   renderWatchlist = chart => {
     return(
-      <ListGroupItem className="list-group-item" key={chart._id}>{`${chart.base} / ${ chart.pair}`} 
-        <Button 
+      <li className="list-group-item" key={chart._id}>{`${chart.base} / ${ chart.pair}`} 
+        <button 
           className="btn btn-light delete-but"
-          onClick={(e) => this.deletePair(chart._id)}>X</Button>
-      </ListGroupItem>
+          onClick={(e) => this.deletePair(chart._id)}>X</button>
+      </li>
     )
   }
   
   render() {
     return( 
-      <Container>  
+      <div className="container">  
         <hr className="my-2" />
         {this.props.chart &&
           <div>
             <h3>Watchlist</h3>
-            <ListGroup>
+            <ul className="list-group">
               {this.props.chart.charts.map(this.renderWatchlist)}
-            </ListGroup>
+            </ul>
           </div>
         }
-      </Container>
+      </div>
     )
   }
 }

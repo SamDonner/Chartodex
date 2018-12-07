@@ -1,6 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import HomeImage  from '../assets/HomeImage.jpg';
-import MainNavbar from './MainNavbar';
 
 const Landing = (props) => {
   return (  
@@ -8,13 +8,13 @@ const Landing = (props) => {
       <div className="showcase_image" > 
         <img src={HomeImage} alt="cover" className="showcase_image"/>
       </div>
-      <MainNavbar/>
       <div className="showcase_wrap">
-        <div className="container showcase">
-          <div style={{textAlign:"left"}}><strong>THIS IS YOUR</strong></div> 
+        <div className="container showcase"> 
           <h5 className="showcase_wrap_text"><strong>CRYPTO TRADING TOOLBOX</strong></h5>
-          <hr className="my-2"/>
-          <button className="login-button">Get started</button>
+          <div className="landing-subtitle">Easily scroll through your favorite, customizable charts, record all of your trading profits, and keep a close eye on your holdings. </div>
+          <button type="button" className="btn login-button shadow" data-toggle="modal" data-target="#exampleModalCenter">
+            Get Started
+          </button>
         </div>  
       </div>
     </div>
