@@ -1,7 +1,7 @@
 import React from 'react'
-import AddChart from '../containers/AddChart';
+import AddChart from './AddChart';
 import Charts from './Charts';
-import Watchlist from '../containers/watchList';
+import Watchlist from './watchList';
 
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AddChart from '../containers/AddChart';
+import AddChart from './AddChart';
 
 
 class MainNavbar extends React.Component {
