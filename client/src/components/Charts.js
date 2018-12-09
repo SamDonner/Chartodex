@@ -16,8 +16,7 @@ class Charts extends Component {
     console.log(chart.base,"render trading view")
     return (
       <TradingViewWidget
-        width="980"
-        height="610"
+        autosize="true"
         symbol={`BINANCE:${chart.pair}${chart.base}`}
         interval="60"
         key={chart._id}
@@ -31,9 +30,9 @@ class Charts extends Component {
     if (this.props.chart.charts.length > 0) {
 
     return (
-      <div className="container charts-container">
+      <div className="container">
         <h1>Charts</h1>
-        <div>
+        <div className="charts-container">
           {this.props.chart.charts.map(this.renderCharts.bind(this))}
         </div>
       </div>

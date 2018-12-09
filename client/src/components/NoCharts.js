@@ -4,9 +4,6 @@ import HomeImage  from '../assets/HomeImage.jpg';
 const NoCharts = (props) => {
   return (   
     <div>
-      <div className="showcase_image" > 
-        <img src={HomeImage} alt="cover" className="showcase_image"/>
-      </div>
       <div className="showcase_wrap center">
         <div className="container showcase"> 
           <h5 className="showcase_wrap_text"><strong>No charts yet</strong></h5>

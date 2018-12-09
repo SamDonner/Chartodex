@@ -10,17 +10,12 @@ h3 {
   text-align: center;
 }
 
-.feather {
-  width: 16px;
-  height: 16px;
-  vertical-align: text-bottom;
-}
 
 /*  ################################################################
-  HOMEPAGE
+  Throughout App
 ################################################################# */
 
-/*Frontpage Header*/
+/*app background*/
 .showcase_image {
   position: fixed;
   background-size: cover;
@@ -32,50 +27,194 @@ h3 {
 }
 
 
-.showcase {
-  height: 500px;
-  color: gray;
-  text-align: left;
-  font-size: 2vw;
+
+
+
+
+
+
+
+
+/**** small device ***/
+@media only screen and (max-width: 600px) {
+  
+  /*  Landing page  */
+  .showcase {
+    height: 500px;
+    color: gray;
+    font-size: 3vw;
+  }
+
+  .showcase_wrap_text {
+    font-family: 'Josefin Sans', sans-serif;
+    color: black;
+    font-weight: 400;
+    font-size: 6vw;
+    width: 100%;
+    text-shadow: 1px 1px 1px rgb(124, 129, 129);
+  }
+
+  .showcase_wrap {
+    padding-top: 200px;
+    text-align: center;
+  }
+
+  .login-button {
+    background-color: #41B8B2;
+    border-radius: 8px;
+    margin: 15% 25%;
+    padding: 10px;
+    font-size: large;
+    color: white;
+    width: 40%;
+  }
+  
+  .login-button:hover {
+    background-color: black;
+    border-radius: 8px;
+    margin: 15% 25%;
+    padding: 10px;
+    font-size: large;
+    color: white;
+    width: 40%;
+  }
+
+  /*  Login page  */
+  .login-page {
+    padding-top: 30%;  
+  }
+  .login-card {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 15px;
+    margin-top: 60px;
+  }
+
+  .login-title {
+    font-family: sans-serif;
+    font-size: 3vw;
+    font-weight: bold;
+    color: #41B8B2;
+    text-align: left;
+  }
+
+  /* add chart in navbar  */
+  .nav-hamburger-menu {
+    width: 50%;
+    margin-left: -15px;
+  }
+
+  /* Main charts */
+  .charts-container {
+    padding-top: 3%;
+    height: 200px;
+  }
 }
 
-.showcase_wrap {
-  padding-top: 15%;
+
+/**** desktop device ***/
+@media only screen and (min-width: 601px) {
+  
+  /* Landing page */
+  .showcase {
+    height: 500px;
+    color: gray;
+    text-align: left;
+    font-size: 2vw;
+    width: 100%;
+  }
+
+  .showcase_wrap_text {
+    font-family: 'Josefin Sans', sans-serif;
+    color: black;
+    font-weight: 400;
+    font-size: 4vw;
+    width: 100%;
+    text-shadow: 1px 1px 1px rgb(124, 129, 129);
+  }
+
+ 
+  
+  .showcase_wrap {
+    padding-top: 15%;
+  }
+
+  .login-button {
+    background-color: #41B8B2;
+    border-radius: 8px;
+    margin-top: 3%;
+    padding: 10px;
+    font-size: large;
+    color: white;
+    width: 40%;
+  }
+  
+  .login-button:hover {
+    background-color: black;
+    border-radius: 8px;
+    margin-top: 3%;
+    padding: 10px;
+    font-size: large;
+    color: white;
+    width: 40%;
+  }
+
+  /*  Login page  */
+  .login-page {
+    padding-top: 10%;  
+  }
+
+  .login-card {
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+    padding-top: 5px;
+  }
+
+  .login-title {
+    font-family: sans-serif;
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: #41B8B2;
+    text-align: left;
+  }
+
+  .nav-hamburger-menu {
+    width: 20%;
+    margin-left: -15px;
+  }
+
+  .charts-container {
+    padding-top: 3%;
+    height: 600px;
+  }
 }
 
-.showcase_wrap_text {
-  font-family: 'Josefin Sans', sans-serif;
-  color: black;
-  font-weight: 400;
-  font-size: 4vw;
-  width: 80%;
-  text-shadow: 1px 1px 1px rgb(124, 129, 129);
-}
-
-.landing-subtitle {
-  width: 60%;
-}
 
 
-.login-button {
+
+
+
+
+
+.login-btn {
   background-color: #41B8B2;
-  border-radius: 8px;
-  margin-top: 3%;
-  padding: 10px;
   font-size: large;
   color: white;
-  width: 40%;
+  width: 100%;
 }
 
-.login-button:hover {
+.login-btn:hover {
   background-color: black;
-  border-radius: 8px;
-  margin-top: 3%;
-  padding: 10px;
   font-size: large;
   color: white;
-  width: 40%;
+  width: 100%;
 }
+
+.login-links {
+  color: #41B8B2;
+}
+
 
 
 
@@ -97,7 +236,7 @@ h3 {
   position: relative;
   top: 0;
   height: calc(100vh - 48px);
-  padding-top: .5rem;
+  padding-top: 50px;
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 }
@@ -109,9 +248,7 @@ h3 {
   }
 }
 
-.sidebar-heading {
-  margin-top: 10%;
-}
+
 
 /*
  * Content
@@ -119,11 +256,10 @@ h3 {
 
 [role="main"] {
    /* Space for fixed navbar */
+   padding-top: 50px;
 }
 
-.charts-container {
-  padding-top: 3%;
-}
+
 
 /*
  * Navbar
@@ -160,15 +296,18 @@ h3 {
   font-size: 2vw;
 }
 
+.nav-add-chart {
+  color: #41B8B2;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2vw;
+}
+
 .nav-hamburger {
   font-size: 25px;
   color: #41B8B2;
 }
 
-.nav-hamburger-menu {
-  width: 20%;
-  margin-left: -15px;
-}
+
 
 .add-chart-btn {
   color: #41B8B2 !important;
@@ -176,33 +315,16 @@ h3 {
   background: transparent;
 }
 
-
-
-
-
-.ticker {
-  background: black;
-  color: white;
+.delete-but {
+  float: right;
 }
 
-.ticker-text {
-  text-align: center;
-  margin-top: 1px;
-  margin-bottom: 1px;
-  color: white;
-}
 
-.ticker-up {
-  color: rgb(21, 175, 142);
-}
 
-.ticker-down {
-  color: red;
-}
+
+
 
 /*
  * Watchlist
  */
-.delete-but {
-  float: right;
-}
+

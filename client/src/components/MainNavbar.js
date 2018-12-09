@@ -14,20 +14,20 @@ class MainNavbar extends React.Component {
         </button>
         <div className="collapse navbar-collapse " id="navbarTogglerDemo02">
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li className="nav-item active">
-              <Link className="nav-link" to="/charts">Charts<span className="sr-only">(current)</span></Link>
+            <li className="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show">
+              <Link className="nav-link" to="/charts">Charts</Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
               <Link className="nav-link" to="/logs">Trading Logs</Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
               <Link className="nav-link" to="/portfolio">Portfolio</Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/" >Logout</Link>
+            <li className="nav-item"  data-toggle="collapse" data-target=".navbar-collapse.show">
+              <Link className="nav-link" to="/">Logout</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link disabled" to="/">Add a chart</Link>
+              <span className="nav-add-chart">Add a chart</span>
             </li>
             <li className="nav-hamburger-menu">
             <AddChart/>
