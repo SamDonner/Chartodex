@@ -26,7 +26,7 @@ class Watchlist extends Component {
         <hr className="my-2" />
         {this.props.chart &&
           <div>
-            <h3>Watchlist</h3>
+            <h5 className="center">Watchlist</h5>
             <ul className="list-group">
               {this.props.chart.charts.map(this.renderWatchlist)}
             </ul>

@@ -32,6 +32,7 @@ class Charts extends Component {
     return (
       <div className="container">
         <h1>Charts</h1>
+        <hr className="my-2" />
         <div className="charts-container">
           {this.props.chart.charts.map(this.renderCharts.bind(this))}
         </div>

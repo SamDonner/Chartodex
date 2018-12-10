@@ -40,9 +40,9 @@ class AddChart extends Component {
       <div className="container">
         <form onSubmit={this.onSubmitForm}>
         
-          <div className="form-group mb-2 mr-sm-2 add-in-nav">
+          <div className="form-group mb-2 mr-sm-2">
             <label className="sr-only">Base Currency</label>
-            <select onChange={this.onChange} value={this.state.base} name="base" className="form-control">
+            <select onChange={this.onChange} value={this.state.base} name="base" className="form-control add-in-nav">
               <option defaultValue="0">Select Base...</option>
               <option value="BTC">BTC</option>
               <option value="ETH">ETH</option>
@@ -56,8 +56,8 @@ class AddChart extends Component {
               value={this.state.pair} 
               name="pair"
               type="text" 
-              className="form-control"  
-              placeholder="Pair (ie ETH)"/>
+              className="form-control add-in-nav"  
+              placeholder="Pair symbol (ex: ETH)"/>
           </div>
           <div>
             <button type="submit" className="btn add-chart-btn mb-2">Add</button>

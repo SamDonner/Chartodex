@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { FETCH_CHARTS, ADD_CHART, DELETE_CHART, CHARTS_LOADING } from './types';
 
+
 export const fetchCharts = () => dispatch => {
   dispatch(setChartsLading());
   axios

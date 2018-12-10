@@ -2,7 +2,11 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const ChartSchema = new Schema({
-   base: {
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'users'
+  },
+  base: {
      type: String,
      required: true
    },

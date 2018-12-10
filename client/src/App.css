@@ -2,13 +2,11 @@ body {
   font-size: .875rem;
 }
 
-h3 {
-  color: gray;
-}
-
 .center {
   text-align: center;
 }
+
+
 
 
 /*  ################################################################
@@ -25,12 +23,6 @@ h3 {
   z-index: -1;
   opacity: .3;
 }
-
-
-
-
-
-
 
 
 
@@ -79,6 +71,30 @@ h3 {
     width: 40%;
   }
 
+   /* navbar */
+   .nav-link {
+    color: rgb(196, 202, 202);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 6vw;
+  }
+  
+  .nav-link:hover {
+    color: #41B8B2;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 6vw;
+  }
+  
+  .nav-add-chart {
+    color: #41B8B2;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 6vw;
+  }
+
+  [role="main"] {
+    /* Space for fixed navbar */
+    padding-top: 70px;
+  }
+
   /*  Login page  */
   .login-page {
     padding-top: 30%;  
@@ -100,8 +116,15 @@ h3 {
 
   /* add chart in navbar  */
   .nav-hamburger-menu {
-    width: 50%;
+    width: 70%;
     margin-left: -15px;
+    margin-top: 5px;
+  }
+
+  .add-in-nav {
+    font-size: 13px;
+    border-radius: 0px;
+  
   }
 
   /* Main charts */
@@ -158,6 +181,30 @@ h3 {
     color: white;
     width: 40%;
   }
+  
+  /* navbar */
+  .nav-link {
+    color: rgb(196, 202, 202);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2vw;
+  }
+  
+  .nav-link:hover {
+    color: #41B8B2;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2vw;
+  }
+  
+  .nav-add-chart {
+    color: #41B8B2;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2vw;
+  }
+
+  [role="main"] {
+    /* Space for fixed navbar */
+    padding-top: 80px;
+  }
 
   /*  Login page  */
   .login-page {
@@ -180,7 +227,7 @@ h3 {
   }
 
   .nav-hamburger-menu {
-    width: 20%;
+    width: 30%;
     margin-left: -15px;
   }
 
@@ -254,10 +301,7 @@ h3 {
  * Content
  */
 
-[role="main"] {
-   /* Space for fixed navbar */
-   padding-top: 50px;
-}
+
 
 
 
@@ -281,26 +325,11 @@ h3 {
 .navi {
   background-color: black;
   color: #41B8B2;
+  padding-left: 20px;
 }
 
 
-.nav-link {
-  color: rgb(196, 202, 202);
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 2vw;
-}
 
-.nav-link:hover {
-  color: #41B8B2;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 2vw;
-}
-
-.nav-add-chart {
-  color: #41B8B2;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 2vw;
-}
 
 .nav-hamburger {
   font-size: 25px;
@@ -313,6 +342,14 @@ h3 {
   color: #41B8B2 !important;
   border: solid 1px #41B8B2;
   background: transparent;
+  width: 95%;
+}
+
+.add-chart-btn:hover {
+  color: white !important;
+  border: solid 1px #41B8B2;
+  background: #41B8B2;
+  width: 95%;
 }
 
 .delete-but {
