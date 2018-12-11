@@ -5,7 +5,6 @@ import { deleteChart } from '../actions/chartActions';
 import { bindActionCreators } from 'redux';
 
 
-
 class Watchlist extends Component {
 
   deletePair = id => {
@@ -21,7 +20,6 @@ class Watchlist extends Component {
       </li>
     )
   }
-
   
   render() {
     const { chart } = this.props;
@@ -45,7 +43,6 @@ class Watchlist extends Component {
         </Link>
         }
       </div>
-
     )
   }
 }

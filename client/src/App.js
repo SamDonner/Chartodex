@@ -13,7 +13,7 @@ import Landing from './components/Landing';
 import MainNavbar from './components/MainNavbar';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
-import WatchList from './components/WatchList';
+import Watchlist from './components/Watchlist';
 
 import './App.css';
 
@@ -43,7 +43,7 @@ class App extends Component {
               <PrivateRoute exact path="/charts" component={ ChartLayout } />
               <PrivateRoute exact path="/logs" component={ ChartLayout } />
               <PrivateRoute exact path="/portfolio" component={ ChartLayout } />
-              <PrivateRoute exact path="/watchlist" component={ WatchList } />
+              <PrivateRoute exact path="/watchlist" component={ Watchlist } />
             </Switch>
             <Route exact path="/login" component={Login} />
            <Route exact path="/register" component={Register} />
