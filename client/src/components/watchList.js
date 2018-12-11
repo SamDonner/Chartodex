@@ -6,17 +6,19 @@ import { bindActionCreators } from 'redux';
 
 
 class Watchlist extends Component {
-
+  
   deletePair = id => {
     this.props.deleteChart(id);
   } 
   
   renderWatchlist = chart => {
     return(
-      <li className="list-group-item center" key={chart._id}>{chart.base} / <strong>{chart.pair}</strong> 
+      <li className="list-group-item watchlist-item" key={chart._id}>{chart.base} / <strong>{ chart.pair}</strong> 
         <button 
-          className="btn btn-light btn-sm delete-but"
-          onClick={(e) => this.deletePair(chart._id)}>X</button>
+          className="btn btn-sm delete-but"
+          onClick={(e) => this.deletePair(chart._id)}>
+          <i className="far fa-trash-alt"></i>
+        </button>
       </li>
     )
   }
@@ -28,20 +30,21 @@ class Watchlist extends Component {
       <div className="container">  
         <hr className="my-2" />
         {chart &&
-          <div className="watchlist">
-            <h5 className="center">Watchlist</h5>
-            <ul className="list-group">
+          <div className="watchlist center">
+            <h5 >Chart Watchlist</h5>
+            <ul className="list-group mb-4">
               {chart.charts.map(this.renderWatchlist)}
             </ul>
-          </div>
-        } 
-        {(window.innerWidth < 768) && 
+            {(window.innerWidth < 768) && 
           <Link to="/charts">
           <button type="button" className="btn add-chart-btn mb-2">
             Back to Charts
           </button>
         </Link>
         }
+          </div>
+        } 
+       
       </div>
     )
   }

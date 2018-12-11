@@ -146,6 +146,18 @@ body {
   .watchlist {
     padding-top: 15%;
     margin-bottom: 10px;
+    margin-right: 12px;
+  }
+
+  .watchlist-item {
+    font-size: 1.5em;
+    background: rgb(248, 247, 247);
+  }
+
+  .delete-but {
+    float: right;
+    padding-right: 0px;
+    background: rgb(248, 247, 247);
   }
 
   .edit-watchlist {
@@ -269,6 +281,27 @@ body {
     padding-top: 3%;
     height: 600px;
   }
+
+  .watchlist {
+    padding-top: 10%;
+    margin-bottom: 10px; 
+  }
+  .watchlist-item {
+    font-size: 1em;
+    text-align: left;
+  }
+
+  .delete-but {
+    float: right;
+    padding-right: 0px;
+  }
+
+  .log-form {
+    margin-top: 15%;
+    padding: 40px 20px;
+    background: rgb(248, 247, 247);
+    align-content: right;
+  }
 }
 
 
@@ -374,9 +407,7 @@ body {
 
 
 
-.delete-but {
-  float: right;
-}
+
 
 
 

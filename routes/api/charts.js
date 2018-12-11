@@ -9,6 +9,7 @@ const validateChartInput = require('../../validation/chart');
 //@route GET current users charts
 //@access Private
 router.get('/', passport.authenticate('jwt', { session: false}), (req, res) => {
+  
   Chart
     .find({ user: req.user.id })
     .sort({ pairing: 1 })
@@ -27,7 +28,7 @@ router.post('/', passport.authenticate('jwt', { session: false}), (req, res) => 
   Chart.findOne({ $and: [{pairing: req.body.pairing}, {user: req.user.id}]})
     .then((pairing) => {
       if(pairing) {
-        errors.pairing = 'Chart already on watchlist';
+        errors.pair = 'Chart already on watchlist';
         return res.status(400).json(errors);
       } else {
         const newChart = new Chart({

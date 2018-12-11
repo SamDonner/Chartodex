@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { FETCH_CHARTS, ADD_CHART, DELETE_CHART, CHARTS_LOADING } from './types';
+import { FETCH_CHARTS, ADD_CHART, DELETE_CHART, CHARTS_LOADING, GET_ERRORS } from './types';
 
 
 export const fetchCharts = () => dispatch => {
@@ -21,6 +21,12 @@ export const addChart = chart => dispatch => {
         type: ADD_CHART,
         payload: res.data
       }))
+      .catch(err => 
+        dispatch({
+          type: GET_ERRORS,
+          payload: err.response.data
+        })
+      )
  
 }
 

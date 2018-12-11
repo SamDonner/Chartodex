@@ -1,7 +1,7 @@
 import React from 'react'
 import AddChart from './AddChart';
 import Charts from './Charts';
-import Watchlist from '../WatchList';
+import Watchlist from '../Watchlist';
 
 
 
