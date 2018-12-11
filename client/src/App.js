@@ -9,15 +9,15 @@ import store from './store';
 
 import PrivateRoute from './components/auth/PrivateRoute';
 import HomeImage  from './assets/HomeImage.jpg';
-import ChartLayout from './components/ChartLayout';
+import ChartLayout from './components/charts/ChartLayout';
 import Landing from './components/Landing';
 import MainNavbar from './components/MainNavbar';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
-import Charts from './components/Charts';
-import LoginModal from './components/auth/LoginModal';
+import WatchList from './components/WatchList';
 
 import './App.css';
+
 
 //check for token
 if (localStorage.jwtToken) {
@@ -37,16 +37,14 @@ class App extends Component {
     return (
       <Provider store={store}>
         <Router>
-          <div className="App" >
-          <div className="showcase_image" > 
-            <img src={HomeImage} alt="cover" className="showcase_image"/>
-          </div>
+          <div className="App" data-toggle="collapse" data-target=".navbar-collapse.show">
             <MainNavbar />
             <Route exact path="/" component={ Landing } />
             <Switch>
               <PrivateRoute exact path="/charts" component={ ChartLayout } />
               <PrivateRoute exact path="/logs" component={ ChartLayout } />
               <PrivateRoute exact path="/portfolio" component={ ChartLayout } />
+              <PrivateRoute exact path="/watchlist" component={ WatchList } />
             </Switch>
             <Route exact path="/login" component={Login} />
            <Route exact path="/register" component={Register} />

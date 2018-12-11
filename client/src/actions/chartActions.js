@@ -3,7 +3,7 @@ import { FETCH_CHARTS, ADD_CHART, DELETE_CHART, CHARTS_LOADING } from './types';
 
 
 export const fetchCharts = () => dispatch => {
-  dispatch(setChartsLading());
+  dispatch(setChartsLoading());
   axios
     .get('/api/charts')
     .then(res => 
@@ -21,7 +21,7 @@ export const addChart = chart => dispatch => {
         type: ADD_CHART,
         payload: res.data
       }))
-    
+ 
 }
 
 export const deleteChart = id => dispatch => {
@@ -35,7 +35,8 @@ export const deleteChart = id => dispatch => {
   )
 }
 
-export const setChartsLading = () => {
+
+export const setChartsLoading = () => {
   return {
     type: CHARTS_LOADING
   }

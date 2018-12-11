@@ -2,6 +2,7 @@ body {
   font-size: .875rem;
 }
 
+
 .center {
   text-align: center;
 }
@@ -28,7 +29,7 @@ body {
 
 
 /**** small device ***/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   
   /*  Landing page  */
   .showcase {
@@ -90,6 +91,21 @@ body {
     font-size: 6vw;
   }
 
+  .add-chart-btn {
+    color: #41B8B2 !important;
+    border: solid 1px #41B8B2;
+    background: transparent;
+    width: 100%;
+
+  }
+  
+  .add-chart-btn:hover {
+    color: white !important;
+    border: solid 1px #41B8B2;
+    background: #41B8B2;
+    width: 100%;
+  }
+
   [role="main"] {
     /* Space for fixed navbar */
     padding-top: 70px;
@@ -121,16 +137,20 @@ body {
     margin-top: 5px;
   }
 
-  .add-in-nav {
-    font-size: 13px;
-    border-radius: 0px;
-  
-  }
-
   /* Main charts */
   .charts-container {
     padding-top: 3%;
     height: 200px;
+  }
+
+  .watchlist {
+    padding-top: 15%;
+    margin-bottom: 10px;
+  }
+
+  .edit-watchlist {
+    color: #41B8B2;
+    float: right;
   }
 }
 
@@ -199,6 +219,20 @@ body {
     color: #41B8B2;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 2vw;
+  }
+
+  .add-chart-btn {
+    color: #41B8B2 !important;
+    border: solid 1px #41B8B2;
+    background: transparent;
+    width: 96%;
+  }
+  
+  .add-chart-btn:hover {
+    color: white !important;
+    border: solid 1px #41B8B2;
+    background: #41B8B2;
+    width: 96%;
   }
 
   [role="main"] {
@@ -338,19 +372,7 @@ body {
 
 
 
-.add-chart-btn {
-  color: #41B8B2 !important;
-  border: solid 1px #41B8B2;
-  background: transparent;
-  width: 95%;
-}
 
-.add-chart-btn:hover {
-  color: white !important;
-  border: solid 1px #41B8B2;
-  background: #41B8B2;
-  width: 95%;
-}
 
 .delete-but {
   float: right;

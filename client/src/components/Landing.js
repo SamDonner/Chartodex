@@ -13,12 +13,15 @@ class Landing extends  Component {
   render() {
     return (  
       <div>
+        <div className="showcase_image" > 
+            <img src={HomeImage} alt="cover" className="showcase_image"/>
+          </div>
         <div className="showcase_wrap">
           <div className="container showcase"> 
             <h5 className="showcase_wrap_text"><strong>CRYPTO TRADING TOOLBOX</strong></h5>
             <div>Easily scroll through your favorite, customizable charts, record all of your trading profits, and keep a close eye on your holdings. </div> 
             <Link to="/login">
-              <button type="button" className="btn login-button shadow" data-toggle="modal" data-target="#loginModal">
+              <button type="button" className="btn login-button shadow">
                 Get Started
               </button>
             </Link>

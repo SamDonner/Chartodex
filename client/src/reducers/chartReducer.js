@@ -1,4 +1,4 @@
-import { FETCH_CHARTS, ADD_CHART, DELETE_CHART, CHARTS_LOADING } from '../actions/types';
+import { FETCH_CHARTS, ADD_CHART, DELETE_CHART, CHART_REORDER_ITEM, CHARTS_LOADING } from '../actions/types';
 
 const initialState = {
   charts: [],

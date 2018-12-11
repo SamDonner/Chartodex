@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { addChart, fetchCharts } from '../actions/chartActions';
+import { addChart, fetchCharts } from '../../actions/chartActions';
 
 
 
@@ -11,7 +11,6 @@ class AddChart extends Component {
     this.state = {
       base: '',
       pair: '',
-      collapsed: true
     }
   }
 
@@ -38,11 +37,11 @@ class AddChart extends Component {
   render() {
     return (
       <div className="container">
+        <h5 className="center">Add a Chart</h5>
         <form onSubmit={this.onSubmitForm}>
-        
           <div className="form-group mb-2 mr-sm-2">
             <label className="sr-only">Base Currency</label>
-            <select onChange={this.onChange} value={this.state.base} name="base" className="form-control add-in-nav">
+            <select onChange={this.onChange} value={this.state.base} name="base" className="form-control">
               <option defaultValue="0">Select Base...</option>
               <option value="BTC">BTC</option>
               <option value="ETH">ETH</option>
@@ -62,7 +61,6 @@ class AddChart extends Component {
           <div>
             <button type="submit" className="btn add-chart-btn mb-2">Add</button>
           </div>
-         
         </form>
       </div> 
     )

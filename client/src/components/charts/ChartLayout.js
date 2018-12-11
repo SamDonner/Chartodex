@@ -1,7 +1,7 @@
 import React from 'react'
 import AddChart from './AddChart';
 import Charts from './Charts';
-import Watchlist from './watchList';
+import Watchlist from '../WatchList';
 
 
 
@@ -9,7 +9,6 @@ const ChartLayout = () => (
   <div>
     <nav className="col-md-2 d-none d-md-block bg-light sidebar">
       <div className="sidebar-sticky">
-        <h5 className="center">Add a Chart</h5>
         <AddChart/>
         <Watchlist/>
       </div>

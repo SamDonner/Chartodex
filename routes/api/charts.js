@@ -24,8 +24,8 @@ router.post('/', passport.authenticate('jwt', { session: false}), (req, res) => 
     return res.status(400).json(errors);
   }
 
-  Chart.findOne({ pairing: req.body.pairing})
-    .then(pairing => {
+  Chart.findOne({ $and: [{pairing: req.body.pairing}, {user: req.user.id}]})
+    .then((pairing) => {
       if(pairing) {
         errors.pairing = 'Chart already on watchlist';
         return res.status(400).json(errors);
