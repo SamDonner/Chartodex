@@ -8,7 +8,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import store from './store';
 
 import PrivateRoute from './components/auth/PrivateRoute';
-import HomeImage  from './assets/HomeImage.jpg';
 import ChartLayout from './components/charts/ChartLayout';
 import Landing from './components/Landing';
 import MainNavbar from './components/MainNavbar';

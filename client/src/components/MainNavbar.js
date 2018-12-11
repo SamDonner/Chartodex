@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AddChart from './charts/AddChart';
 import { connect } from 'react-redux';
 import { logoutUser } from '../actions/authActions';
 
