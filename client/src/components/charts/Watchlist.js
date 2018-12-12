@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { deleteChart } from '../actions/chartActions';
+import { deleteChart } from '../../actions/chartActions';
 import { bindActionCreators } from 'redux';
 
 
