@@ -13,7 +13,7 @@ import Landing from './components/Landing';
 import MainNavbar from './components/MainNavbar';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
-import Watchlist from './components/Watchlist';
+import Watchlist from '../src/components/Watchlist';
 import LogForm from './components/tradeLogs/LogForm';
 
 import './App.css';
