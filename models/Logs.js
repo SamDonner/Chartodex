@@ -19,15 +19,15 @@ const LogSchema = new Schema({
      required: true
    },
    quantity: {
-    type: Number,
+    type: String,
     required: true
   },
   buyPrice: {
-    type: Number,
+    type: String,
     default: 0
   },
   sellPrice: {
-    type: Number,
+    type: String,
     default: 0
   }
 

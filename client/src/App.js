@@ -14,9 +14,10 @@ import MainNavbar from './components/MainNavbar';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Watchlist from './components/charts/Watchlist';
-import LogForm from './components/tradeLogs/LogForm';
+import TradeLogs from './components/tradeLogs/TradeLogs';
 
 import './App.css';
+
 
 
 //check for token
@@ -42,7 +43,7 @@ class App extends Component {
             <Route exact path="/" component={ Landing } />
             <Switch>
               <PrivateRoute exact path="/charts" component={ ChartLayout } />
-              <PrivateRoute exact path="/logs" component={ LogForm } />
+              <PrivateRoute exact path="/logs" component={ TradeLogs } />
               <PrivateRoute exact path="/portfolio" component={ ChartLayout } />
               <PrivateRoute exact path="/watchlist" component={ Watchlist } />
             </Switch>

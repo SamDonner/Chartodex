@@ -10,7 +10,8 @@ export const fetchCharts = () => dispatch => {
       dispatch({
         type: FETCH_CHARTS,
         payload: res.data
-      }))
+      })
+    )
 }
 
 export const addChart = chart => dispatch => {

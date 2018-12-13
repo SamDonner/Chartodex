@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 
 const Log = require('../../models/Logs');
+const validateLogsInput = require('../../validation/logs');
 
 
 // @route  Get api/logs
@@ -20,6 +21,13 @@ router.get('/', passport.authenticate('jwt', { session: false}), (req, res) => {
 // @desc   post new logs
 // @access private 
 router.post('/', passport.authenticate('jwt', {session: false}), (req, res) => {
+  const { errors, isValid } = validateLogsInput(req.body);
+
+  if(!isValid) {
+    return res.status(400).json(errors);
+  }
+  console.log('post logs', req.body)
+  
   const newLog = new Log({
     user: req.user.id,
     base: req.body.base,
@@ -31,5 +39,13 @@ router.post('/', passport.authenticate('jwt', {session: false}), (req, res) => {
   newLog.save().then(log => res.json(log));
 })
 
+// @route  delete api/logs
+// @desc   delete entry
+// @access private 
+router.delete('/:id', (req, res) => {
+  Log.findById(req.params.id)
+    .then(entry => entry.remove().then(() => res.json({success: true})))
+    .catch(err => res.status(404).json({ success: false }))
+})
 
 module.exports = router;

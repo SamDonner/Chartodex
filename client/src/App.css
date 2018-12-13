@@ -2,11 +2,16 @@ body {
   font-size: .875rem;
 }
 
-
 .center {
   text-align: center;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+td {
+  word-break: break-all;
+}
 
 
 
@@ -106,7 +111,7 @@ body {
     width: 100%;
   }
 
-  [role="main"] {
+  main {
     /* Space for fixed navbar */
     padding-top: 70px;
   }
@@ -157,13 +162,25 @@ body {
   .delete-but {
     float: right;
     padding-right: 0px;
-    background: rgb(248, 247, 247);
+    background: transparent;
   }
 
   .edit-watchlist {
     color: #41B8B2;
     float: right;
   }
+
+  .log-form {
+    margin-top: 30px;
+    padding-top: 10px;
+    background: rgb(248, 247, 247);
+  
+  }
+
+  .log-container {
+    position: absolute;
+  }
+  
 }
 
 
@@ -247,7 +264,7 @@ body {
     width: 96%;
   }
 
-  [role="main"] {
+  main {
     /* Space for fixed navbar */
     padding-top: 80px;
   }
@@ -294,23 +311,17 @@ body {
   .delete-but {
     float: right;
     padding-right: 0px;
+    background: transparent;
   }
 
   .log-form {
-    margin-top: 15%;
     padding: 40px 20px;
     background: rgb(248, 247, 247);
-    align-content: right;
   }
 }
 
 
-
-
-
-
-
-
+/* GENERAL STYLES */
 .login-btn {
   background-color: #41B8B2;
   font-size: large;
@@ -328,9 +339,6 @@ body {
 .login-links {
   color: #41B8B2;
 }
-
-
-
 
 /*
  * Sidebar
@@ -362,16 +370,6 @@ body {
   }
 }
 
-
-
-/*
- * Content
- */
-
-
-
-
-
 /*
  * Navbar
  */
@@ -395,9 +393,6 @@ body {
   padding-left: 20px;
 }
 
-
-
-
 .nav-hamburger {
   font-size: 25px;
   color: #41B8B2;
@@ -414,7 +409,5 @@ body {
 
 
 
-/*
- * Watchlist
- */
+
 

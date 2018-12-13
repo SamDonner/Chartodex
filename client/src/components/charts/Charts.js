@@ -14,8 +14,7 @@ class Charts extends Component {
     this.props.fetchCharts();
   }
   
-  renderCharts(chart) {
-    console.log(chart.base,"render trading view")
+  renderCharts = (chart) => {
     return (
       <TradingViewWidget
         autosize="true"
@@ -40,9 +39,9 @@ class Charts extends Component {
       <div className="container">
         <h1>Charts</h1>
         <hr className="my-2" />
-        { (window.innerWidth < 768) && smallDevice}
+        { (window.innerWidth < 768) && smallDevice }
         <div className="charts-container">
-          {this.props.chart.charts.map(this.renderCharts.bind(this))}
+          {this.props.chart.charts.map(this.renderCharts)}
         </div>
       </div>
     )

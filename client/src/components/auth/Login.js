@@ -58,7 +58,7 @@ class Login extends Component {
           <div className="card login-card shadow">
             <div className="card-body">
             <p className="login-title">Login to your account</p>
-              <form onSubmit={this.onSubmit}>
+              <form noValidate onSubmit={this.onSubmit}>
                 <div className="form-group">
                   <input 
                     type="email" 
