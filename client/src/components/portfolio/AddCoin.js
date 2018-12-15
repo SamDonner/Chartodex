@@ -38,11 +38,29 @@ class AddCoin extends Component {
     setTimeout(this.props.getPortfolio,500)
    
   }
+
+  numberWithCommas = (num) => {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+  getNetWorth = () => {
+    if (this.props.portfolio.portfolio) { 
+      const { portfolio } = this.props.portfolio;
+    
+      const worth = portfolio.reduce((acc, cur) => {
+        return acc + (cur.price * cur.holdings)
+      }, 0)
+      return this.numberWithCommas(worth.toFixed(2))
+    } else {
+    return '';
+    }
+  }
  
   render() {
     const { errors } = this.state;
     return (
-      <form className="log-form" onSubmit={this.onSubmit}>
+      <div className="card">
+      <form className="card-header navi" onSubmit={this.onSubmit}>
         <div className="form-row ">
           <div className="col-4">
             <input 
@@ -72,6 +90,9 @@ class AddCoin extends Component {
         </div>
        
       </form>
+          <div className="card-body coin-symbol coin-card"> <h5 className="card-title">My Portfolio</h5>${this.getNetWorth()}</div>
+        </div>
+      
 
 
     )
@@ -79,6 +100,7 @@ class AddCoin extends Component {
 
 }
 const mapStateToProps = (state) => ({
+  portfolio: state.portfolio,
   errors: state.errors
 })
 const mapDispatchToProps = dispatch => {

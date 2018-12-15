@@ -13,19 +13,9 @@ class PortfolioTable extends Component  {
   deleteCoin = (id) => {
     this.props.deleteCoin(id);
   }
-
-  getNetWorth = () => {
-    if (this.props.portfolio.portfolio) { 
-      const { portfolio } = this.props.portfolio;
-    
-      const worth = portfolio.reduce((acc, cur) => {
-        return acc + (cur.price * cur.holdings)
-      }, 0)
-      return worth.toFixed(2)
-    } else {
-    return '';
-    }
-  }
+  numberWithCommas = (num) => {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+} 
 
   renderRow = coin => {
    const price = coin.price < 1 ? +coin.price.toFixed(4) : coin.price.toFixed(2);
@@ -41,7 +31,7 @@ class PortfolioTable extends Component  {
               {coin.change.toFixed(2)}%
           </div>
         </td>
-        <td><div className="label">${worth}</div><div className="sub-label">{coin.holdings}</div></td>
+        <td><div className="label">${this.numberWithCommas(worth)}</div><div className="sub-label">{coin.holdings}</div></td>
         <td>
           <button className="btn btn-sm delete-coin label" 
             onClick={(e) => this.deleteCoin(coin._id)}>
@@ -54,11 +44,7 @@ class PortfolioTable extends Component  {
 
   render() { 
     return (
-      <div>
-        <div className="card">
-          <div className="card-body coin-symbol"> {this.getNetWorth()}</div>
-        </div>
-        <table className="table ">
+        <table className="table">
           <thead>
             <tr>
               <th scope="col">Coin</th>
@@ -71,7 +57,6 @@ class PortfolioTable extends Component  {
             {this.props.portfolio.portfolio.map(this.renderRow)}
           </tbody>
         </table>
-        </div>
     )
   }
 }

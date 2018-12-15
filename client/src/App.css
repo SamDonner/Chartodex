@@ -405,6 +405,7 @@ td {
     font-size: 1.1em;
     color: rgb(173, 170, 170);
   }
+
 }
 
 
@@ -445,6 +446,12 @@ td {
 
 .negative {
   color: red;
+}
+
+.coin-card {
+  background: black;
+  color: white;
+  border: solid 1px #41B8B2;
 }
 
 /*
