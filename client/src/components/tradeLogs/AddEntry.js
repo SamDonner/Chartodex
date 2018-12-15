@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import classnames from 'classnames';
 import { addEntry, getLogs } from '../../actions/logActions';
 
-class LogForm extends Component {
+class AddEntry extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,7 +18,7 @@ class LogForm extends Component {
   }
 
   onChange = e => {
-    this.setState({[e.target.name]: e.target.value.toUpperCase() })
+    this.setState({[e.target.name]: e.target.value.toUpperCase(), errors: {}})
   }
 
   onSubmit = e => {
@@ -32,7 +32,8 @@ class LogForm extends Component {
       sellPrice: this.state.sellPrice
     }
     this.props.addEntry(newEntry);
-    if(!this.state.errors) {
+    this.props.getLogs();
+    if(Object.keys(this.state.errors).length < 1) {
     this.setState({ 
       pair: '',
       quantity: '',
@@ -40,7 +41,7 @@ class LogForm extends Component {
       sellPrice: '',
       errors: {}
     })};
-    this.props.getLogs();
+    
   }
 
   componentWillReceiveProps(nextProps) {
@@ -115,7 +116,7 @@ class LogForm extends Component {
               {errors.sellPrice && (<div className="invalid-feedback">{errors.sellPrice}</div>)}
           </div>
         </div>
-        <button type="submit" className="btn login-button mb-2">Add Entry</button>
+        <button type="submit" className="btn add-button mb-2">Add Entry</button>
       </form>
     )
   }
@@ -127,4 +128,4 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({ addEntry, getLogs }, dispatch);
 }
-export default connect(mapStateToProps, mapDispatchToProps)(LogForm);
+export default connect(mapStateToProps, mapDispatchToProps)(AddEntry);

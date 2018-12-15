@@ -15,8 +15,10 @@ import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Watchlist from './components/charts/Watchlist';
 import TradeLogs from './components/tradeLogs/TradeLogs';
+import Portfolio from './components/portfolio/Portfolio';
 
 import './App.css';
+
 
 
 
@@ -44,7 +46,7 @@ class App extends Component {
             <Switch>
               <PrivateRoute exact path="/charts" component={ ChartLayout } />
               <PrivateRoute exact path="/logs" component={ TradeLogs } />
-              <PrivateRoute exact path="/portfolio" component={ ChartLayout } />
+              <PrivateRoute exact path="/portfolio" component={ Portfolio } />
               <PrivateRoute exact path="/watchlist" component={ Watchlist } />
             </Switch>
             <Route exact path="/login" component={Login} />

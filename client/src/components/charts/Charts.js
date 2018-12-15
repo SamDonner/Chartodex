@@ -30,7 +30,7 @@ class Charts extends Component {
     const smallDevice = (
       <div>
         <AddChart/>
-        <Link to="/watchlist"  className="edit-watchlist">Edit watchlist</Link>
+        <Link to="/watchlist"  className="back-link">Edit watchlist</Link>
       </div>)
     
     if (this.props.chart.charts.length > 0) {

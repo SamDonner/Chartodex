@@ -27,8 +27,9 @@ td {
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: .3;
+  opacity: .2;
 }
+
 
 
 
@@ -165,20 +166,60 @@ td {
     background: transparent;
   }
 
-  .edit-watchlist {
-    color: #41B8B2;
-    float: right;
+  .delete-coin {
+    padding-right: 8px;
+    background: transparent;
   }
+
+  .add-button {
+    background-color: #41B8B2;
+    border-radius: 8px;
+    margin: 10px 10px;
+
+    font-size: large;
+    color: white;
+  }
+  
+  .add-button:hover {
+    background-color: black;
+    border-radius: 8px;
+    margin: 10% 10%;
+    padding: 10px;
+    font-size: large;
+    color: white;
+  }
+
 
   .log-form {
     margin-top: 30px;
-    padding-top: 10px;
+    padding: 10px;
     background: rgb(248, 247, 247);
   
   }
 
+  .coin-btn {
+    background: #41B8B2;
+    color: white;
+    margin: 0px 20px;
+  }
+
   .log-container {
     position: absolute;
+    padding: 10px;
+  }
+
+  .coin-symbol {
+    font-size: 1.4em;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  .label {
+    font-size: 1.2em;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  .sub-label {
+    font-size: .8em;
+    color: rgb(173, 170, 170);
   }
   
 }
@@ -314,9 +355,55 @@ td {
     background: transparent;
   }
 
+  .delete-coin {
+    padding-right: 5px;
+    background: transparent;
+  }
+
+  .add-button {
+    background-color: #41B8B2;
+    border-radius: 8px;
+    margin: 10% 10%;
+    padding: 10px;
+    font-size: large;
+    color: white;
+    width: 40%;
+  }
+  
+  .add-button:hover {
+    background-color: black;
+    border-radius: 8px;
+    margin: 10% 10%;
+    padding: 10px;
+    font-size: large;
+    color: white;
+    width: 40%;
+  }
+
   .log-form {
     padding: 40px 20px;
     background: rgb(248, 247, 247);
+  }
+
+  .coin-symbol {
+    font-size: 1.8em;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  .coin-btn {
+    background: #41B8B2;
+    color: white;
+    margin: 0px 40px;
+  }
+
+  .label {
+    font-size: 1.5em;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  .sub-label {
+    font-size: 1.1em;
+    color: rgb(173, 170, 170);
   }
 }
 
@@ -338,6 +425,26 @@ td {
 
 .login-links {
   color: #41B8B2;
+}
+
+.back-link {
+  color: #41B8B2;
+  float: right;
+}
+
+.heading {
+  display: inline-block;
+}
+
+/* Portfolio */
+
+
+.positive {
+  color: #41B8B2
+}
+
+.negative {
+  color: red;
 }
 
 /*

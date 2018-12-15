@@ -15,7 +15,7 @@ class LogTable extends Component  {
     let profit = +((entry.sellPrice - entry.buyPrice) * entry.quantity).toFixed(4);
     let percent = +(((entry.sellPrice - entry.buyPrice) / entry.sellPrice) * 100).toFixed(2);
    
-    if(entry.buyPrice === '') {
+    if(entry.buyPrice === '' || entry.sellPrice === '') {
       profit = 0;
       percent = 0;
     }
@@ -31,7 +31,7 @@ class LogTable extends Component  {
         <td>{profit}</td>
         <td>{percent.toString()}</td>
         <td>
-          <button className="btn btn-sm delete-but" 
+          <button className="btn btn-sm delete-coin" 
           onClick={(e) => this.deleteEntry(entry._id)}>
             <i className="far fa-trash-alt"></i>
           </button>
@@ -42,7 +42,7 @@ class LogTable extends Component  {
 
   render() {
     return (
-      <table className="table table-condensed log-table table-striped">
+      <table className="table log-table table-striped">
         <thead>
           <tr>
             <th scope="col">Date</th>
@@ -52,6 +52,7 @@ class LogTable extends Component  {
             <th scope="col">Sell Price</th>
             <th scope="col">Profit</th>
             <th scope="col">Profit %</th>
+            <th scope="col"><i className="far fa-trash-alt"></i></th>
           </tr>
         </thead>
         <tbody>
