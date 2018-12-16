@@ -42,7 +42,7 @@ class LogTable extends Component  {
 
   render() {
     return (
-      <table className="table log-table table-striped">
+      <table className="table table-striped">
         <thead>
           <tr>
             <th scope="col">Date</th>
@@ -50,7 +50,7 @@ class LogTable extends Component  {
             <th scope="col">Quantity</th>
             <th scope="col">Buy Price</th>
             <th scope="col">Sell Price</th>
-            <th scope="col">Profit</th>
+            <th scope="col">Profit (base)</th>
             <th scope="col">Profit %</th>
             <th scope="col"><i className="far fa-trash-alt"></i></th>
           </tr>

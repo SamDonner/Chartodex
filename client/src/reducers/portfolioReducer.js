@@ -1,4 +1,4 @@
-import { GET_PORTFOLIO, ADD_COIN, DELETE_COIN, PORTFOLIO_LOADING } from '../actions/types';
+import { GET_PORTFOLIO, ADD_COIN, DELETE_COIN} from '../actions/types';
 
 const initialState = {
   coins: [],

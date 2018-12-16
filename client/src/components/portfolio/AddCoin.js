@@ -14,8 +14,6 @@ class AddCoin extends Component {
     }
   }
 
- 
-
   componentWillReceiveProps(nextProps) {
     if(nextProps.errors) {
       this.setState({errors: nextProps.errors})
@@ -34,7 +32,7 @@ class AddCoin extends Component {
       holdings: this.state.holdings,
     }
     this.props.addCoin(newCoin);
-    
+    this.setState({coin: '', holdings: ''})
     setTimeout(this.props.getPortfolio,500)
    
   }
@@ -52,7 +50,7 @@ class AddCoin extends Component {
       }, 0)
       return this.numberWithCommas(worth.toFixed(2))
     } else {
-    return '';
+    return '0.00';
     }
   }
  

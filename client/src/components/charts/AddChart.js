@@ -17,7 +17,7 @@ class AddChart extends Component {
   }
 
   onChange = e => {
-    this.setState({ [e.target.name]: e.target.value.toUpperCase() })
+    this.setState({ [e.target.name]: e.target.value.toUpperCase(), errors: {} })
   }
 
   onSubmitForm = e => {
@@ -58,7 +58,7 @@ class AddChart extends Component {
               className={classnames('form-control', {
                 'is-invalid': errors.base
               })} >
-              <option defaultValue="0">Select Base...</option>
+              <option value="">Select Base...</option>
               <option value="BTC">BTC</option>
               <option value="ETH">ETH</option>
               <option value="USDT">USDT</option>

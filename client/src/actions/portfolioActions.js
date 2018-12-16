@@ -19,13 +19,11 @@ export const addCoin = coin => dispatch => {
         type: ADD_COIN,
         payload: res.data
       }))
-      .catch(err => {
-        console.log(err)
+      .catch(err => 
         dispatch({
           type: GET_ERRORS,
           payload: err.response.data
         })
-      }
       )
  
 }

@@ -60,7 +60,7 @@ class AddEntry extends Component {
           <select className={classnames('form-control', {
                 'is-invalid': errors.base
               })} value={this.state.base} onChange={this.onChange} name="base">
-          <option default>Base...</option>
+          <option value="">Base...</option>
           <option value="BTC">BTC</option>
           <option value="ETH">ETH</option>
           <option value="USDT">USD</option>
@@ -116,7 +116,7 @@ class AddEntry extends Component {
               {errors.sellPrice && (<div className="invalid-feedback">{errors.sellPrice}</div>)}
           </div>
         </div>
-        <button type="submit" className="btn add-button mb-2">Add Entry</button>
+        <button type="submit" className="btn add-button">Add Entry</button>
       </form>
     )
   }

@@ -53,9 +53,11 @@ class PortfolioTable extends Component  {
               <th scope="col"><i className="far fa-trash-alt"></i></th>
             </tr>
           </thead>
+          {this.props.portfolio.portfolio &&
           <tbody>
             {this.props.portfolio.portfolio.map(this.renderRow)}
           </tbody>
+          }
         </table>
     )
   }

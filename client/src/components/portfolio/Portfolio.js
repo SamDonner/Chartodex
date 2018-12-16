@@ -14,7 +14,7 @@ const Portfolio = (props) => {
         <Link to='/charts' ><h6 className="back-link heading mt-4">Back to Charts</h6></Link>
         </div>
         <hr className="my-2" />
-        <div className="center log-table">
+        <div className="center">
           <AddCoin />
           <PortfolioTable />
         </div>
