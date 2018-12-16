@@ -5,7 +5,7 @@ const keys = require('../../config/keys');
 const getQuotes = async (coin) => {
  
   const symbols = coin.map(coin => {return coin.coin})
-  try {const res = await axios({
+  const res = await axios({
     method: 'get',
     url: 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest',
     responseType:'json',
@@ -32,11 +32,9 @@ const getQuotes = async (coin) => {
     portfolio.push(coinData)
   });
   return portfolio;
-}catch(error) {
-    console.log(error);
-  };
+} 
   
-  }
+  
 
 module.exports.getQuotes = getQuotes;
   

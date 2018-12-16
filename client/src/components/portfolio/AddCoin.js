@@ -14,11 +14,6 @@ class AddCoin extends Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
-    if(nextProps.errors) {
-      this.setState({errors: nextProps.errors})
-    }
-  }
 
   onChange = e => {
     this.setState({[e.target.name]: e.target.value.toUpperCase(), errors: {}})
@@ -31,15 +26,24 @@ class AddCoin extends Component {
       coin: this.state.coin,
       holdings: this.state.holdings,
     }
+
     this.props.addCoin(newCoin);
     this.setState({coin: '', holdings: ''})
     setTimeout(this.props.getPortfolio,500)
    
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.errors !== this.props.errors) {
+      this.setState({
+        errors: this.props.errors
+      });
+    }
+  }
+
   numberWithCommas = (num) => {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
+  }
 
   getNetWorth = () => {
     if (this.props.portfolio.portfolio) { 
@@ -56,6 +60,7 @@ class AddCoin extends Component {
  
   render() {
     const { errors } = this.state;
+    
     return (
       <div className="card">
       <form className="card-header navi" onSubmit={this.onSubmit}>

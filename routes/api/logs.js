@@ -26,7 +26,6 @@ router.post('/', passport.authenticate('jwt', {session: false}), (req, res) => {
   if(!isValid) {
     return res.status(400).json(errors);
   }
-  console.log('post logs', req.body)
   
   const newLog = new Log({
     user: req.user.id,

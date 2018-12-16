@@ -2,6 +2,7 @@ import axios from 'axios';
 import { GET_PORTFOLIO, ADD_COIN, DELETE_COIN, GET_ERRORS, PORTFOLIO_LOADING } from './types';
 
 export const getPortfolio = () => dispatch => {
+  dispatch(setPortfolioLoading());
   axios.get('/api/portfolio')
     .then(res => {
       dispatch({

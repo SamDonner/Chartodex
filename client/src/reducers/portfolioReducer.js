@@ -1,4 +1,4 @@
-import { GET_PORTFOLIO, ADD_COIN, DELETE_COIN} from '../actions/types';
+import { GET_PORTFOLIO, ADD_COIN, DELETE_COIN, PORTFOLIO_LOADING } from '../actions/types';
 
 const initialState = {
   coins: [],
@@ -11,6 +11,7 @@ export default function(state = initialState, action) {
       return {
         ...state,
         portfolio: action.payload,
+        loading: false
       };
     case ADD_COIN:
       return {
@@ -22,7 +23,11 @@ export default function(state = initialState, action) {
         ...state,
         coins: state.coins.filter(coin => coin._id !== action.payload),
         portfolio: state.portfolio.filter(coin => coin._id !== action.payload)
-
+      }
+    case PORTFOLIO_LOADING: 
+      return {
+        ...state,
+        loading: true
       }
     default:
       return state;

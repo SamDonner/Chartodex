@@ -64,8 +64,7 @@ class PortfolioTable extends Component  {
 }
 
 const mapStateToProps = (state) => ({
-  portfolio: state.portfolio,
-  errors: state.errors
+  portfolio: state.portfolio
 });
 
 const mapDispatchToProps = (dispatch) => {
