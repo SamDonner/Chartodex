@@ -113,6 +113,10 @@ td {
     width: 100%;
   }
 
+  .no-charts {
+    padding:100px 10px;
+  }
+
   main {
     /* Space for fixed navbar */
     padding-top: 70px;
@@ -308,6 +312,10 @@ td {
     width: 96%;
   }
 
+  .no-charts {
+    padding: 200px 10px;
+  }
+
   main {
     /* Space for fixed navbar */
     padding-top: 80px;
@@ -433,6 +441,7 @@ td {
 .back-link {
   color: #41B8B2;
   float: right;
+  margin-right: 15px;
 }
 
 .heading {

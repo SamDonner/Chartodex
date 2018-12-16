@@ -48,7 +48,7 @@ class Charts extends Component {
   } else {
     return (
       <div>
-        {(window.innerWidth < 768) ? smallDevice :
+        {(window.innerWidth < 768) ? <div>{smallDevice}<NoCharts/></div> :
         <NoCharts/>
         }
       </div>
