@@ -29,6 +29,14 @@ const LogSchema = new Schema({
   sellPrice: {
     type: String,
     default: 0
+  },
+  profit: {
+    type: Number,
+    default: 0
+  },
+  percent: {
+    type: Number,
+    default: 0
   }
 
 

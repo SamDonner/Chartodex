@@ -23,14 +23,25 @@ class AddEntry extends Component {
 
   onSubmit = e => {
     e.preventDefault();
+
+    let profit = +((this.state.sellPrice - this.state.buyPrice) * this.state.quantity).toFixed(4);
+    let percent = +(((this.state.sellPrice - this.state.buyPrice) / this.state.sellPrice) * 100).toFixed(2);
+   
+    if(this.state.buyPrice === '' || this.state.sellPrice === '') {
+      profit = 0;
+      percent = 0;
+    }
    
     const newEntry = {
       base: this.state.base,
       pair: this.state.pair,
       quantity: this.state.quantity,
       buyPrice: this.state.buyPrice,
-      sellPrice: this.state.sellPrice
+      sellPrice: this.state.sellPrice,
+      profit: profit,
+      percent: percent
     }
+    console.log(newEntry)
     this.props.addEntry(newEntry);
     this.props.getLogs();
     if(Object.keys(this.state.errors).length < 1) {

@@ -395,6 +395,15 @@ td {
     background: rgb(248, 247, 247);
   }
 
+  .card-layout {
+    float: left;
+    display: inline;
+  }
+
+  .card-data {
+    float: right;
+  }
+
   .coin-symbol {
     font-size: 1.8em;
     font-family: 'Josefin Sans', sans-serif;

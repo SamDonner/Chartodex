@@ -12,24 +12,17 @@ class LogTable extends Component  {
     this.props.deleteEntry(id);
   }
   renderRow = entry => {
-    let profit = +((entry.sellPrice - entry.buyPrice) * entry.quantity).toFixed(4);
-    let percent = +(((entry.sellPrice - entry.buyPrice) / entry.sellPrice) * 100).toFixed(2);
-   
-    if(entry.buyPrice === '' || entry.sellPrice === '') {
-      profit = 0;
-      percent = 0;
-    }
-    
+    console.log('date', entry.date.substr(0, 10))
     return (
     
       <tr key={entry.date}>
-        <th scope="row">{entry.date.toString()}</th>
-        <td>{entry.base} / {entry.pair}</td>
+        <th scope="row">{entry.date.substr(0, 10)}</th>
+        <td>{entry.base} - {entry.pair}</td>
         <td>{entry.quantity}</td>
         <td>{entry.buyPrice}</td>
         <td>{entry.sellPrice}</td>
-        <td>{profit}</td>
-        <td>{percent.toString()}</td>
+        <td>{entry.profit}</td>
+        <td>{entry.percent}</td>
         <td>
           <button className="btn btn-sm delete-coin" 
           onClick={(e) => this.deleteEntry(entry._id)}>
