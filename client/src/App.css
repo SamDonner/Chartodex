@@ -358,6 +358,7 @@ td {
   .watchlist-item {
     font-size: 1em;
     text-align: left;
+    font-family: 'Josefin Sans', sans-serif;
   }
 
   .delete-but {

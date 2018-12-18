@@ -13,7 +13,7 @@ class Watchlist extends Component {
   
   renderWatchlist = chart => {
     return(
-      <li className="list-group-item watchlist-item" key={chart._id}>{chart.base} / <strong>{ chart.pair}</strong> 
+      <li className="list-group-item watchlist-item label" key={chart._id}>{chart.base}  / <strong>{ chart.pair}</strong> 
         <button 
           className="btn btn-sm delete-but"
           onClick={(e) => this.deletePair(chart._id)}>
