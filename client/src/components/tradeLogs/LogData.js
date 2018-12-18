@@ -59,8 +59,8 @@ class LogData extends Component {
 
   callRenderData = (base) => {
     return (
-      <div>
-        {this.state[base].month &&
+      <div key={base}>
+        {this.state[base].total &&
           <div className="card mb-2">
           <div className="card-body">
             <h5 className="card-title">{base}</h5>

@@ -1,4 +1,4 @@
-import { GET_LOGS, ADD_ENTRY, DELETE_ENTRY, EDIT_ENTRY} from '../actions/types';
+import { GET_LOGS, ADD_ENTRY, DELETE_ENTRY} from '../actions/types';
 
 const initialState = {
   logs: []

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_LOGS, ADD_ENTRY, EDIT_ENTRY, DELETE_ENTRY, GET_ERRORS } from './types';
+import { GET_LOGS, ADD_ENTRY, DELETE_ENTRY, GET_ERRORS } from './types';
 
 export const getLogs = () => dispatch => {
   axios

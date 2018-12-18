@@ -12,7 +12,6 @@ class LogTable extends Component  {
     this.props.deleteEntry(id);
   }
   renderRow = entry => {
-    console.log('date', entry.date.substr(0, 10))
     return (
     
       <tr key={entry.date}>

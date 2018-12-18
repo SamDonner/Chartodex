@@ -21,7 +21,7 @@ router.get('/', passport.authenticate('jwt', { session: false}), (req, res) => {
     .then(coin => {
       return helpers.getQuotes(coin) 
     })
-    .then(data => res.json(data));
+    .then(data => res.json(data))
 });
 
 
