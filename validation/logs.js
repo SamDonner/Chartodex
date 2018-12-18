@@ -18,7 +18,7 @@ module.exports = function validateLogsInput(data) {
     errors.pair = 'Pair field is required';
   }
 
-  if(data.quantity.length > 0 && !Validator.isNumberic(data.quantity, {no_symbols: false})) {
+  if(data.quantity.length > 0 && !Validator.isNumeric(data.quantity, {no_symbols: false})) {
     errors.quantity = 'Must be a numeric value';
   }
 
