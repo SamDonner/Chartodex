@@ -21,7 +21,7 @@ class Charts extends Component {
         symbol={`BINANCE:${chart.pair}${chart.base}`}
         interval="60"
         key={chart._id}
-        hide_side_toolbar="false"
+        hide_side_toolbar='false'
       />
     ) 
   }

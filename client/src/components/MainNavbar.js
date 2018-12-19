@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { logoutUser } from '../actions/authActions';
+import logo from '../assets/logo.jpg';
 
 
 class MainNavbar extends React.Component {
@@ -38,7 +39,7 @@ class MainNavbar extends React.Component {
     )
     return (   
       <nav className="navbar fixed-top navi front shadow">
-        <Link className="mr-auto nav-brand" to="/">Chartodex</Link>
+        <Link className="mr-auto nav-brand" to="/"><img src={logo} alt="logo" className="logo"/>Chartodex</Link>
         {this.props.auth.isAuthenticated && 
         <span>{`Hi, ${user.name.toUpperCase()}`}</span>}
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
