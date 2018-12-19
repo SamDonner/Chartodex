@@ -82,7 +82,7 @@ class LogData extends Component {
         <hr className="my-2" />
           <div className="watchlist center">
             <h5 >Log Summary</h5>
-              {this.state.bases.map(this.callRenderData)}
+              {this.props.log.logs && this.state.bases.map(this.callRenderData)}
             {(window.innerWidth < 768) && 
           <Link to="/logs">
             <button type="button" className="btn add-chart-btn mb-2">
