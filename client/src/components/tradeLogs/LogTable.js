@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import classnames from 'classnames'
 import { getLogs, deleteEntry } from '../../actions/logActions';
 
 class LogTable extends Component  {
@@ -20,8 +21,8 @@ class LogTable extends Component  {
         <td>{entry.quantity}</td>
         <td>{entry.buyPrice}</td>
         <td>{entry.sellPrice}</td>
-        <td>{entry.profit}</td>
-        <td>{entry.percent}</td>
+        <td><div className={classnames({"positive sub-label": entry.profit >= 0, "negative sub-label": entry.profit < 0})}>{entry.profit}</div></td>
+        <td><div className={classnames({"positive sub-label": entry.percent >= 0, "negative sub-label": entry.percent < 0})}>{entry.percent}</div></td>
         <td>
           <button className="btn btn-sm delete-coin" 
           onClick={(e) => this.deleteEntry(entry._id)}>

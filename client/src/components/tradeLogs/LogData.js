@@ -25,7 +25,8 @@ class LogData extends Component {
       this.state.bases.map(this.getData)
     }
   }
-
+  
+  //add up total of given category
   getTotal = (arr, cat) => {
     if (arr) {   
       const total = arr.reduce((acc, cur) => {
@@ -37,6 +38,7 @@ class LogData extends Component {
     }
   }
 
+  //aggregate data for sidebar
   getData = (base) => {
     if (this.props.log.logs) {
       const { logs } = this.props.log;
@@ -46,12 +48,13 @@ class LogData extends Component {
       const week = logs.filter(entry => entry.base === base && (date(entry.date) > (Date.now() - 604800000)));
       const month = logs.filter(entry => entry.base === base && (date(entry.date) > (Date.now() - 2592000000)));
       const total = logs.filter(entry => entry.base === base);
-    
+      console.log(this.getTotal(day, 'amtBase'))
+ 
       const data = {
-        day: {profit: this.getTotal(day, 'profit'), percent: this.getTotal(day, 'percent')}, 
-        week: {profit: this.getTotal(week, 'profit'), percent: this.getTotal(week, 'percent')}, 
-        month: {profit: this.getTotal(month, 'profit'), percent: this.getTotal(month, 'percent')},
-        total: {profit: this.getTotal(total, 'profit'), percent: this.getTotal(total, 'percent')}
+        day: {profit: this.getTotal(day, 'profit'), percent: +((this.getTotal(day, 'profit') / this.getTotal(day, 'amtBase')) * 100).toFixed(2)}, 
+        week: {profit: this.getTotal(week, 'profit'), percent: +((this.getTotal(week, 'profit') / this.getTotal(week, 'amtBase')) * 100).toFixed(2)}, 
+        month: {profit: this.getTotal(month, 'profit'), percent: +((this.getTotal(month, 'profit') / this.getTotal(month, 'amtBase')) * 100).toFixed(2)},
+        total: {profit: this.getTotal(total, 'profit'), percent: +((this.getTotal(total, 'profit') / this.getTotal(total, 'amtBase')) * 100).toFixed(2)}
       }
       this.setState({[base]: data})
       }

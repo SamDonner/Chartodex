@@ -32,6 +32,7 @@ router.post('/', passport.authenticate('jwt', {session: false}), (req, res) => {
     base: req.body.base,
     pair: req.body.pair,
     quantity: req.body.quantity,
+    amtBase: req.body.amtBase,
     buyPrice: req.body.buyPrice,
     sellPrice: req.body.sellPrice,
     profit: req.body.profit,

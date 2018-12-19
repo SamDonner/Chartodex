@@ -9,18 +9,22 @@ const LogSchema = new Schema({
   date: {
      type: Date,
      default: Date.now
-   },
-   base: {
-     type: String,
-     required: true
-   },
-   pair: {
-     type: String,
-     required: true
-   },
-   quantity: {
+  },
+  base: {
     type: String,
     required: true
+  },
+  pair: {
+    type: String,
+    required: true
+  },
+  quantity: {
+   type: String,
+   required: true
+  },
+  amtBase: {
+    type: Number,
+    default: 0
   },
   buyPrice: {
     type: String,
