@@ -5,7 +5,6 @@ import AddEntry from './AddEntry';
 import LogTable from './LogTable';
 import LogData from './LogData';
 
-
 const TradeLogs = (props) => {
   return (
     <div className={classNames({'log-container': (window.innerWidth < 768)})}>
@@ -34,5 +33,3 @@ const TradeLogs = (props) => {
   )
 }
 export default TradeLogs;
-/* <main className={classNames({'container': (window.innerWidth > 768)})}>
-</main>    */

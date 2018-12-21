@@ -22,6 +22,7 @@ router.get('/', passport.authenticate('jwt', { session: false}), (req, res) => {
       return helpers.getQuotes(coin) 
     })
     .then(data => res.json(data))
+    .catch(err => res.status(400).json({success:false}))
 });
 
 
@@ -47,6 +48,7 @@ router.post('/', passport.authenticate('jwt', { session: false}), (req, res) => 
         newCoin.save().then(coin => res.json(coin));
       }
     })
+    .catch(err => res.status(400).json({success:false}))
     
   });
 

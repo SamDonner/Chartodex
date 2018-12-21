@@ -15,6 +15,7 @@ export const GET_LOGS = 'GET_LOGS';
 export const ADD_ENTRY = 'ADD_ENTRY';
 export const EDIT_ENTRY = 'EDIT_ENTRY';
 export const DELETE_ENTRY = 'DELETE_ENTRY';
+export const LOG_LOADING = 'LOG_LOADING';
 
 //Portfolio Types 
 export const GET_PORTFOLIO = 'GET_PORTFOLIO';

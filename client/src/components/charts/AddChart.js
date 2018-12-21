@@ -31,7 +31,7 @@ class AddChart extends Component {
 
     this.props.addChart(newChart);
     this.setState({pair: ''})
-    this.props.fetchCharts()
+    this.props.fetchCharts();
   }
 
   componentDidUpdate(prevProps, prevState) {

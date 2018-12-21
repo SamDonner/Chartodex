@@ -6,9 +6,7 @@ import { getPortfolio, deleteCoin } from '../../actions/portfolioActions';
 
 class PortfolioTable extends Component  {
   
-  componentDidMount() {
-    this.props.getPortfolio()
-  }
+ 
 
   deleteCoin = (id) => {
     this.props.deleteCoin(id);

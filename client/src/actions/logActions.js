@@ -1,7 +1,8 @@
 import axios from 'axios';
-import { GET_LOGS, ADD_ENTRY, DELETE_ENTRY, GET_ERRORS } from './types';
+import { GET_LOGS, ADD_ENTRY, DELETE_ENTRY, GET_ERRORS, LOG_LOADING } from './types';
 
 export const getLogs = () => dispatch => {
+  dispatch(setLogLoading());
   axios
     .get('/api/logs')
     .then(res =>
@@ -37,4 +38,10 @@ export const deleteEntry = id => dispatch => {
         payload: id
       })
     )
+}
+
+export const setLogLoading = () => {
+  return {
+    type: LOG_LOADING
+  }
 }

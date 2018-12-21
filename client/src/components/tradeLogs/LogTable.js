@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import classnames from 'classnames'
 import { getLogs, deleteEntry } from '../../actions/logActions';
+import Loading from '../Loading';
 
 class LogTable extends Component  {
   componentDidMount() {
@@ -34,6 +35,7 @@ class LogTable extends Component  {
   }
 
   render() {
+    if (!this.props.log.loading) {
     return (
       <table className="table table-striped">
         <thead>
@@ -53,6 +55,9 @@ class LogTable extends Component  {
         </tbody>
       </table>
     )
+  } else {
+    return <Loading/>
+  }
   }
 }
 

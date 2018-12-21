@@ -1,4 +1,4 @@
-import { GET_LOGS, ADD_ENTRY, DELETE_ENTRY} from '../actions/types';
+import { GET_LOGS, ADD_ENTRY, DELETE_ENTRY, LOG_LOADING} from '../actions/types';
 
 const initialState = {
   logs: []
@@ -10,11 +10,17 @@ export default function(state = initialState, action) {
       return {
         ...state,
         logs: action.payload,
+        loading: false
       };
     case ADD_ENTRY:
       return {
         ...state,
         logs: [...state.logs, action.payload]
+      }
+    case LOG_LOADING:
+      return {
+        ...state,
+        loading: true
       }
     case DELETE_ENTRY:
       return {
