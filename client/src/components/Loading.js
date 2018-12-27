@@ -5,7 +5,7 @@ class Loading extends Component {
   render() {
     return (
       <div className="loading">
-        <i className="fas fa-spinner fa-spin spinner loading" ></i>
+        <i className="fas fa-spinner fa-spin spinner" ></i>
              
       </div>
       

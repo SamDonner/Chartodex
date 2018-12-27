@@ -25,8 +25,7 @@ class Portfolio extends Component {
           <hr className="my-2" />
           <div className="center">
             <AddCoin />
-            {this.props.portfolio.loading ? <Loading/> : <PortfolioTable />}
-            
+            {this.props.portfolio.loading ? <Loading/> : <PortfolioTable />}    
           </div>
       </main>
       </div>

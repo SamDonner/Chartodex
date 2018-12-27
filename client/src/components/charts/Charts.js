@@ -34,6 +34,10 @@ class Charts extends Component {
         <Link to="/watchlist"  className="back-link">Edit watchlist</Link>
         
       </div>)
+
+    if (this.props.chart.loading) {
+      return <div><Loading/></div>
+    } 
     
     if (this.props.chart.charts.length > 0) {
 
@@ -48,9 +52,7 @@ class Charts extends Component {
         </div>
       )
     } else {
-      if (this.props.chart.loading) {
-        return <Loading/>
-      } else {
+      
       return (
         <div>
           {(window.innerWidth < 768) ? <div>{smallDevice}<NoCharts/></div> :
@@ -59,7 +61,7 @@ class Charts extends Component {
         </div>
       )}
     }
-  }
+  
 }
 
 const mapStateToProps = (state) => ({

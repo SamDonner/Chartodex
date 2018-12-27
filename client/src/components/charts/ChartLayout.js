@@ -18,4 +18,5 @@ const ChartLayout = () => (
       </main>     
   </div>
 )
+
 export default ChartLayout;
