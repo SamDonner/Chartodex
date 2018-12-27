@@ -36,7 +36,7 @@ class Charts extends Component {
       </div>)
 
     if (this.props.chart.loading) {
-      return <div><Loading/></div>
+      return <div className="loading-charts"><Loading/></div>
     } 
     
     if (this.props.chart.charts.length > 0) {

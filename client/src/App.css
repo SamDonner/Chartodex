@@ -45,8 +45,13 @@ h1 {
 @media only screen and (max-width: 768px) {
 
   .loading {
-    margin: 25% 30%;
+    margin: 25% 35%;
     width: 100px; 
+  }
+
+  .loading-charts {
+    margin-left: 50px;
+    
   }
   
   .spinner {
