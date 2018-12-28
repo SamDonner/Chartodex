@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const path = require('path');
+var enforce = require('express-sslify');
 
 const charts = require('./routes/api/charts');
 const users = require('./routes/api/users');
@@ -10,6 +11,8 @@ const portfolio = require('./routes/api/portfolio');
 const passport = require('passport');
 
 const app = express();
+
+app.use(enforce.HTTPS({ trustProtoHeader: true }))
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
