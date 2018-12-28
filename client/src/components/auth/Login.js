@@ -48,6 +48,7 @@ class Login extends Component {
   render() {
     const { errors } = this.state;
 
+
     return (
       <div>
         <div className="showcase_image" > 
